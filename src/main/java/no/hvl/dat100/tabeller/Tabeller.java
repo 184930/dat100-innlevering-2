@@ -3,53 +3,7 @@ package no.hvl.dat100.tabeller;
 public class Tabeller {
 
 	// a)
-	public static void skrivUt(int[] tabell) {
-	    if (tabell == null || tabell.length == 0) {
-	        System.out.println("Tabellen er tom.");
-	        return; // Stopper metoden hvis tabellen er tom eller 0
-	    }
 
-	    System.out.print("[ "); // Starter med å skrive ut en åpning parentese
-	    for (int i = 0; i < tabell.length; i++) {
-	        System.out.print(tabell[i]); // Skriv ut elementet
-	        if (i < tabell.length - 1) {
-	            System.out.print(", "); // Skriv ut en komma og mellomrom hvis det ikke er det siste elementet
-	        }
-	    }
-	    System.out.print(" ]"); // Avslutter med en lukking parentes
-	    System.out.println(); // Ny linje etter utskrift
-	}
-	public static void main(String[] args) {
-	    int[] tall = {1, 2, 3, 4, 5};
-	    skrivUt(tall);
-	    }
-
-
-	// b)
-	public static String tilStreng(int[] tabell) {
-	    String streng = "[";
-	    int i = 0;
-
-	    // Loop gjennom tabellen
-	    while (i < tabell.length) {
-	        streng += tabell[i]; // Legg til elementet
-	        i++;
-
-	        // Hvis vi ikke er på slutten av tabellen, legg til komma
-	        if (i != tabell.length) {
-	            streng += ",";
-	        }
-	    }
-
-	    streng += "]"; // Legg til slutten av strengen
-	    return streng;
-	}
-
-	public static void main(String[] args) {
-	    int[] tabell = {42, 67, 89};
-	    String resultat = tilStreng(tabell);
-	    System.out.println(resultat); // Skal skrive ut "[42,67,89]"
-	}
 
 
 	// c)
@@ -71,11 +25,10 @@ public class Tabeller {
 	    }
 
 	    public static void main(String[] args) {
-	        // Eksempel på hvordan bruke summer metoden
 	        int[] tall = {1, 2, 3, 4, 5};
 	        int resultat = summer(tall);
 	        
-	        System.out.println("Summen av tallene i tabellen er: " + resultat); // Bør skrive ut 15
+	        System.out.println("Summen av tallene i tabellen er: " + resultat); 
 	    }
 	}
 
