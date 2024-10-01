@@ -19,26 +19,35 @@ public class Tabeller {
 	    System.out.print(" ]"); // Avslutter med en lukking parentes
 	    System.out.println(); // Ny linje etter utskrift
 	}
-	public static void main(String[] args) {
-	    int[] tall = {1, 2, 3, 4, 5};
-	    skrivUt(tall); // Dette vil skrive ut: [ 1, 2, 3, 4, 5 ]
-	}
+
 
 
 	// b)
 	public static String tilStreng(int[] tabell) {
-		String streng = "[";
-		int i = 0;
-		while(i<tabell.length) {
-			streng += tabell[i];
-			i++;
-			if (i != tabell.length) {
-				streng += ",";
-			}
-		}
-		streng += "]";
-		return streng;
+	    String streng = "[";
+	    int i = 0;
+
+	    // Loop gjennom tabellen
+	    while (i < tabell.length) {
+	        streng += tabell[i]; // Legg til elementet
+	        i++;
+
+	        // Hvis vi ikke er på slutten av tabellen, legg til komma
+	        if (i != tabell.length) {
+	            streng += ",";
+	        }
+	    }
+
+	    streng += "]"; // Legg til slutten av strengen
+	    return streng;
 	}
+
+	public static void main(String[] args) {
+	    int[] tabell = {42, 67, 89};
+	    String resultat = tilStreng(tabell);
+	    System.out.println(resultat); // Skal skrive ut "[42,67,89]"
+	}
+
 
 	// c)
 	public static int summer(int[] tabell) {
