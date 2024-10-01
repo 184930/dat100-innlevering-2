@@ -26,17 +26,28 @@ public class Tabeller {
 
 	// b)
 	public static String tilStreng(int[] tabell) {
-		String streng = "[";
-		int i = 0;
-		while(i<tabell.length) {
-			streng += tabell[i];
-			i++;
-			if (i != tabell.length) {
-				streng += ",";
-			}
-		}
-		streng += "]";
-		return streng;
+	    String streng = "[";
+	    int i = 0;
+
+	    // Loop gjennom tabellen
+	    while (i < tabell.length) {
+	        streng += tabell[i]; // Legg til elementet
+	        i++;
+
+	        // Hvis vi ikke er på slutten av tabellen, legg til komma
+	        if (i != tabell.length) {
+	            streng += ",";
+	        }
+	    }
+
+	    streng += "]"; // Legg til slutten av strengen
+	    return streng;
+	}
+
+	public static void main(String[] args) {
+	    int[] tabell = {42, 67, 89};
+	    String resultat = tilStreng(tabell);
+	    System.out.println(resultat); // Skal skrive ut "[42,67,89]"
 	}
 
 	// c)
