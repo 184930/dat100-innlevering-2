@@ -19,7 +19,10 @@ public class Tabeller {
 	    System.out.print(" ]"); // Avslutter med en lukking parentes
 	    System.out.println(); // Ny linje etter utskrift
 	}
-
+	public static void main(String[] args) {
+	    int[] tall = {1, 2, 3, 4, 5};
+	    skrivUt(tall);
+	    }
 
 
 	// b)
@@ -51,13 +54,32 @@ public class Tabeller {
 
 	// c)
 	public static int summer(int[] tabell) {
-		int sum = 0;
-		for (int i = 0;i<tabell.length;i++) {
-			sum = sum + tabell[i];
-		}
-		return sum;
+	    int sum = 0;
+	    for (int i = 0; i < tabell.length; i++) {
+	        sum = sum + tabell[i];
+	    }
+	    return sum;
+	}
+	public class TabellOperasjoner {
+
+	    public static int summer(int[] tabell) {
+	        int sum = 0;
+	        for (int i = 0; i < tabell.length; i++) {
+	            sum = sum + tabell[i];
+	        }
+	        return sum;
+	    }
+
+	    public static void main(String[] args) {
+	        // Eksempel på hvordan bruke summer metoden
+	        int[] tall = {1, 2, 3, 4, 5};
+	        int resultat = summer(tall);
+	        
+	        System.out.println("Summen av tallene i tabellen er: " + resultat); // Bør skrive ut 15
+	    }
 	}
 
+	
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
 		boolean sannhet = false;
