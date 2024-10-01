@@ -29,35 +29,52 @@ public class Tabeller {
 	    String streng = "[";
 	    int i = 0;
 
-	    // Loop gjennom tabellen
 	    while (i < tabell.length) {
-	        streng += tabell[i]; // Legg til elementet
+	        streng += tabell[i];
 	        i++;
 
-	        // Hvis vi ikke er på slutten av tabellen, legg til komma
 	        if (i != tabell.length) {
 	            streng += ",";
 	        }
 	    }
 
-	    streng += "]"; // Legg til slutten av strengen
+	    streng += "]"; 
 	    return streng;
 	}
 
 	public static void main(String[] args) {
 	    int[] tabell = {42, 67, 89};
 	    String resultat = tilStreng(tabell);
-	    System.out.println(resultat); // Skal skrive ut "[42,67,89]"
+	    System.out.println(resultat); 
 	}
+
 
 	// c)
 	public static int summer(int[] tabell) {
-		int sum = 0;
-		for (int i = 0;i<tabell.length;i++) {
-			sum = sum + tabell[i];
-		}
-		return sum;
+	    int sum = 0;
+	    for (int i = 0; i < tabell.length; i++) {
+	        sum = sum + tabell[i];
+	    }
+	    return sum;
 	}
+	public class TabellOperasjoner {
+
+	    public static int summer(int[] tabell) {
+	        int sum = 0;
+	        for (int i = 0; i < tabell.length; i++) {
+	            sum = sum + tabell[i];
+	        }
+	        return sum;
+	    }
+
+	    public static void main(String[] args) {
+	        int[] tall = {1, 2, 3, 4, 5};
+	        int resultat = summer(tall);
+	        
+	        System.out.println("Summen av tallene i tabellen er: " + resultat); 
+	    }
+	}
+
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
