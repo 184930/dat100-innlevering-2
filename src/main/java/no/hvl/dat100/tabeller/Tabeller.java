@@ -4,10 +4,26 @@ public class Tabeller {
 
 	// a)
 	public static void skrivUt(int[] tabell) {
-		for(int i=0;i<tabell.length;i++) {
-			System.out.print(tabell[i] + " ");
-		}
+	    if (tabell == null || tabell.length == 0) {
+	        System.out.println("Tabellen er tom.");
+	        return; // Stopper metoden hvis tabellen er tom eller 0
+	    }
+
+	    System.out.print("[ "); // Starter med å skrive ut en åpning parentese
+	    for (int i = 0; i < tabell.length; i++) {
+	        System.out.print(tabell[i]); // Skriv ut elementet
+	        if (i < tabell.length - 1) {
+	            System.out.print(", "); // Skriv ut en komma og mellomrom hvis det ikke er det siste elementet
+	        }
+	    }
+	    System.out.print(" ]"); // Avslutter med en lukking parentes
+	    System.out.println(); // Ny linje etter utskrift
 	}
+	public static void main(String[] args) {
+	    int[] tall = {1, 2, 3, 4, 5};
+	    skrivUt(tall); // Dette vil skrive ut: [ 1, 2, 3, 4, 5 ]
+	}
+
 
 	// b)
 	public static String tilStreng(int[] tabell) {
