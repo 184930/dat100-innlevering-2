@@ -50,13 +50,6 @@ public class Tabeller {
 
 
 	// c)
-	public static int summer(int[] tabell) {
-	    int sum = 0;
-	    for (int i = 0; i < tabell.length; i++) {
-	        sum = sum + tabell[i];
-	    }
-	    return sum;
-	}
 	public class TabellOperasjoner {
 
 	    public static int summer(int[] tabell) {
